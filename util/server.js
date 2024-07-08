@@ -27,6 +27,7 @@ function sleep(ms) {
 http
   .createServer( async function (request, response) {
 
+    // 配置COOP/COEP请求头，实现跨源隔离
     response.setHeader("Cross-Origin-Opener-Policy", "same-origin");
     response.setHeader("Cross-Origin-Embedder-Policy", "require-corp");
 
